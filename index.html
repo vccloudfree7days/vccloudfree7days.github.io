@@ -129,7 +129,7 @@ function resizeText() {
         </div>
         <div class="col-lg-6 wow fadeInUp delay-06s">
           <div class="form">
-          <form id="get-mail" action="https://formspree.io/dongtm@vccloud.vn" method="POST">
+          <form id="contact-form" action="//formspree.io/dongtm@vccloud.vn" method="POST">
             <input class="input-text animated wow flipInY delay-02s" type="text" name="name" value="Họ và tên *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
             <input class="input-text animated wow flipInY delay-02s" type="text" name="phone" value="Số điện thoại *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
             <input class="input-text animated wow flipInY delay-04s" type="text" name="position" value="Vị trí - Đơn vị công tác *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
@@ -140,28 +140,27 @@ function resizeText() {
         </div>
       </div>
       <script>
-        jQuery(document).ready(function($){
-          var $getmail = $("#get-mail")
-          $getmail.on('submit',function(e){
-            e.preventDefault();
-            $.ajax({
-            url: 'https://formspree.io/dongtm@vccloud.vn',
+        var $contactForm = $('#contact-form');
+        $contactForm.submit(function(e) {
+          e.preventDefault();
+          $.ajax({
+            url: '//formspree.io/sales@vccloud.vn',
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
             beforeSend: function() {
-              $getmail.append('<div class="alert alert--loading">Sending message…</div>');
+              $contactForm.append('<div class="alert alert-loading">Sending message…</div>');
             },
             success: function(data) {
-              $getmail.find('.alert--loading').hide();
-              $getmail.append('<div class="alert alert--success">Message sent!</div>');
+              $contactForm.find('.alert-loading').hide();
+              $contactForm.append('<div class="alert alert-success">Message sent!</div>');
+              $(".modal-footer button").click();
             },
             error: function(err) {
-              $getmail.find('.alert--loading').hide();
-              $getmail.append('<div class="alert alert--error">Ops, there was an error.</div>');
+              $contactForm.find('.alert-loading').hide();
+              $contactForm.append('<div class="alert alert-error">Ops, there was an error.</div>');
             }
           });
-          })
         });
       </script>
       <div class="contact_section">
