@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>Homepage</title>
+<meta name="description" content="VCCloud - nhà cung cấp các dịch vụ trên nền tảng điện toán đám mây OpenStack đầu tiên tại Việt Nam. Đăng kí trải nghiệm miễn phí dịch vụ Cloud Server chất lượng cao ">
+<meta property="og:image" content="https://vccloud.vn/images/vccloudban.png">
+<meta name="author" content="VCCloud">
+<meta name="keywords" content="vps vietnam, vps gia re, virtual server hosting, thue vps gia re, thue vps, thue server gia re, thue server ao, thue cho dat may chu, servers cloud, server may chu, server cloud, mua vps, máy server, may chu server, may chu ao, cloud vps server, Cloud Vps, cloud service, Cloud Server, cloud computing, cloud computering, Cho thue vps gia re">
+<title>Đăng kí trải nghiệm miễn phí dịch vụ Cloud Server chất lượng cao</title>
 <link rel="icon" href="img/vccloud-fav.png" type="image/png">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -17,7 +21,7 @@
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
-<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -88,29 +92,6 @@ function resizeText() {
   </div>
 </header>
 <!--Header_section--> 
-
-<!--Top_content-->
-<section id="top_content" class="top_cont_outer">
-  <div class="top_cont_inner">
-    <div class="container">
-      <div class="top_content">
-        <div class="row">
-          <div class="col-lg-5 col-sm-7">
-            <div class="top_left_cont flipInY wow animated">
-              <h3>VCCloud</h3>
-              <h2> Dịch vụ máy chủ ảo.</h2>
-              <p><i class="fa fa-check"></i> Tốc độ cao, bảo mật, an toàn, ổn định</p>
-              <p><i class="fa fa-check"></i> Tăng tốc và tối ưu hóa website</p>
-              <p><i class="fa fa-check"></i> Uptime 99.99%</p>
-              <a href="#contact" class="learn_more2">Đăng ký dùng thử</a> </div>
-          </div>
-          <div class="col-lg-7 col-sm-5"> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Top_content--> 
 <section class="footer_section" id="contact">
   <div class="container">
     <section class="main-section contact" id="contact">
@@ -129,7 +110,7 @@ function resizeText() {
         </div>
         <div class="col-lg-6 wow fadeInUp delay-06s">
           <div class="form">
-          <form id="contact-form" action="//formspree.io/dongtm@vccloud.vn" method="POST">
+          <form id="contact-form" action="https://formspree.io/sales@vccloud.vn" method="POST">
             <input class="input-text animated wow flipInY delay-02s" type="text" name="name" value="Họ và tên *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
             <input class="input-text animated wow flipInY delay-02s" type="text" name="phone" value="Số điện thoại *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
             <input class="input-text animated wow flipInY delay-04s" type="text" name="position" value="Vị trí - Đơn vị công tác *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
@@ -144,21 +125,21 @@ function resizeText() {
         $contactForm.submit(function(e) {
           e.preventDefault();
           $.ajax({
-            url: '//formspree.io/sales@vccloud.vn',
+            url: 'https://formspree.io/sales@vccloud.vn',
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
             beforeSend: function() {
-              $contactForm.append('<div class="alert alert-loading">Sending message…</div>');
+              $contactForm.append('<div class="alert alert-loading" style="margin-top: 20px">Sending message…</div>');
             },
             success: function(data) {
               $contactForm.find('.alert-loading').hide();
-              $contactForm.append('<div class="alert alert-success">Message sent!</div>');
+              $contactForm.append('<div class="alert alert-success" style="margin-top: 20px">Message sent!</div>');
               $(".modal-footer button").click();
             },
             error: function(err) {
               $contactForm.find('.alert-loading').hide();
-              $contactForm.append('<div class="alert alert-error">Ops, there was an error.</div>');
+              $contactForm.append('<div class="alert alert-error" style="margin-top: 20px">Ops, there was an error.</div>');
             }
           });
         });
@@ -187,6 +168,28 @@ function resizeText() {
     </section>
   </div>
 </section>
+<!--Top_content-->
+<section id="top_content" class="top_cont_outer">
+  <div class="top_cont_inner">
+    <div class="container">
+      <div class="top_content">
+        <div class="row">
+          <div class="col-lg-5 col-sm-7">
+            <div class="top_left_cont flipInY wow animated">
+              <h3>VCCloud</h3>
+              <h2> Dịch vụ máy chủ ảo.</h2>
+              <p><i class="fa fa-check"></i> Tốc độ cao, bảo mật, an toàn, ổn định</p>
+              <p><i class="fa fa-check"></i> Tăng tốc và tối ưu hóa website</p>
+              <p><i class="fa fa-check"></i> Uptime 99.99%</p>
+              <a href="#contact" class="learn_more2">Đăng ký dùng thử</a> </div>
+          </div>
+          <div class="col-lg-7 col-sm-5"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Top_content--> 
 
 <!--Service-->
 <section  id="service">
