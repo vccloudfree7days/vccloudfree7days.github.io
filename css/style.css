@@ -368,9 +368,11 @@ a.learn_more2:hover{
 	position:relative;
 	}
 	
-	
+#topbar i{
+	margin-right: 5px;
+}	
 .top_cont_latest{
-	background:url(../img/cloud-server-2.png) no-repeat right center;
+	
 }
 	
 .work_pic{
