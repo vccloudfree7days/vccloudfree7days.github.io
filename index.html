@@ -22,7 +22,7 @@
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -148,7 +148,7 @@ function resizeText() {
             },
             success: function(data) {
               $contactForm.find('.alert-loading').hide();
-              $contactForm.append('<div class="alert alert-success" style="margin-top: 20px">Xin cảm ơn quý khách!<br/>VCCloud sẽ liên hệ trực tiếp đến quý khách trong thời gian sớm nhất</div>');
+              $contactForm.append('<div class="alert alert-success" style="margin-top: 20px">Xin cảm ơn quý khách !<br>VCCloud sẽ liên hệ trực tiếp đến quý khách trong thời gian sớm nhất.</div>');
               $(".modal-footer button").click();
             },
             error: function(err) {
